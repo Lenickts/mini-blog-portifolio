@@ -152,3 +152,47 @@ aside{
     color: white;
     font-family: var(--font-robot);
 }
+
+/* Usar Mediaquery para responsividade
+    Estamos na branch response para iniciar */
+
+@media (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'menu'
+      'main'
+      'lateral'
+      'footer';
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .side-menu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .side-menu i,
+  .side-menu a {
+    display: inline-block;
+  }
+
+  .main-content,
+  aside {
+    margin: 0;
+  }
+
+  header {
+    padding: 30px 10px;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 20px 10px;
+  }
+}
